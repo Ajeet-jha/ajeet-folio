@@ -192,11 +192,15 @@
 
 })(jQuery);
 
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', () => {
+  let age = 0;
+  const currentAge = parseInt((new Date() - new Date("01/22/1990"))/ (1000 * 60 * 60 * 24*365));
   const ageDiv =  document.getElementById("age");
-    if(ageDiv) {
-      const age = parseInt((new Date() - new Date("01/22/1990"))/ (1000 * 60 * 60 * 24*365));
-      let demo = new CountUp("age", 0, age, 0, 8);
-      demo.start();
+  const interval = setInterval(() => {
+    if(age === currentAge){
+      clearInterval(interval)
     }
+      ageDiv.innerHTML = +age;
+      age++;
+  }, 300);
 });
