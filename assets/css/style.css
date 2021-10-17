@@ -79,6 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 150px;
   border: 8px solid #2c2f3f;
   height: 150px;
+  object-fit: cover;
 }
 
 #header .profile h1 {
@@ -212,13 +213,14 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/b.jpg") top center;
+  background: url("../img/latest/main.jpg") top center;
   background-size: cover;
 }
 
 #hero:before {
   content: "";
   background: rgba(5, 13, 24, 0.3);
+  /* background: #050d181f; */
   position: absolute;
   bottom: 0;
   top: 0;
