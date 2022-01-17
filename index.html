@@ -288,13 +288,13 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="margin-left: 30px;">
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="margin-left: 30px;">
             <div class="portfolio-wrap1">
               <video controls>
                 <source src="/assets/videos/chidhiyan.mp4" type="video/mp4">
               </video>
             </div>
-          </div>
+          </div> -->
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
@@ -514,6 +514,19 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    const interval = setInterval(()=>{
+      const activeProfiletab = document.querySelector("#portfolio-flters li");
+      if(activeProfiletab) {
+        // alert("Scroll slowly !!")
+        clearInterval(interval);
+        document.querySelector("#portfolio-flters > li:nth-child(3)").click()
+        activeProfiletab.click();
+        document.querySelector("#portfolio-flters > li:nth-child(3)").click()
+        activeProfiletab.click();
+      }
+    },200)
+  </script>
 </div>
 <div style="display: none; padding: 16px;
     /* display: flex; */
